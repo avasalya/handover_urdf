@@ -1,0 +1,60 @@
+<!-- used for specifying only the kinematic and dynamic properties of a single robot in isolation -->
+<?xml version="1.0"?>
+
+<robot name="handoverPipe">
+
+	<link name="base_link">
+		<visual>
+			<material name="black">
+				<color rgba="0 0 0 1"/>
+			</material>
+			<geometry>
+				<cylinder length=".9" radius="0.015"/>
+				<!-- <sphere radius=".06"/> -->
+			</geometry>	
+			<origin rpy="-1.57 0 0" xyz="0 0 0"/>
+			<!-- <origin rpy="-1.57 0 0" xyz=".3 0 1.1"/> -->
+		</visual>
+	</link>
+
+
+	<link name="right_link">
+		<visual>
+			<material name="blue">
+				<color rgba="0 0 1 1"/>
+			</material>
+			<geometry>
+				<sphere radius=".06"/>
+			</geometry>	
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="base_to_right_link" type="continuous">
+		<parent link="base_link"/>
+		<child link="right_link"/>
+		<origin xyz="0 0.3 0"/>
+	</joint>
+
+
+
+	<link name="left_link">
+		<visual>
+			<material name="red">
+				<color rgba="1 0 0 1"/>
+			</material>
+			<geometry>
+				<sphere radius=".06"/>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+		</visual>
+	</link>
+
+	<joint name="base_to_left_link" type="continuous">
+		<parent link="base_link"/>
+		<child link="left_link"/>
+		<origin xyz="0 -0.3 0"/>
+	</joint>
+
+</robot>
+

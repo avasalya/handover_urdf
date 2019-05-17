@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+
+<robot name="handoverPipe">
+  
+  <planar_surface name="handoverPipeBottom" link="base_link">
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <points>
+      <point xy="-5 -5" />
+      <point xy="5 -5" />
+      <point xy="5 5" />
+      <point xy="-5 5" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+
+
+
+ <!--  <planar_surface name="handoverPipeBottom" link="right_link">
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <points>
+      <point xy="-5 -5" />
+      <point xy="5 -5" />
+      <point xy="5 5" />
+      <point xy="-5 5" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+
+
+
+  <planar_surface name="handoverPipeBottom" link="left_link">
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <points>
+      <point xy="-5 -5" />
+      <point xy="5 -5" />
+      <point xy="5 5" />
+      <point xy="-5 5" />
+    </points>
+    <material name="plastic" />
+  </planar_surface> -->
+
+</robot>
